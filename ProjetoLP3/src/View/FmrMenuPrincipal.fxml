@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="368.0" prefWidth="263.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CMenuPrincipal">
+   <children>
+      <Text layoutX="43.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnMenuAlimento" layoutX="48.0" layoutY="66.0" mnemonicParsing="false" onAction="#novoAlimento" text="Cadastro de Alimentos" />
+      <Button fx:id="btnMenuUsuarios" layoutX="54.0" layoutY="171.0" mnemonicParsing="false" onAction="#novoUsuario" text="Cadastro de Usuários" />
+      <Button fx:id="btnMenuFamilias" layoutX="55.0" layoutY="120.0" mnemonicParsing="false" onAction="#novaFamilia" text="Cadastro de Famílias" />
+      <Button fx:id="btnMenuRelatorio" layoutX="89.0" layoutY="261.0" mnemonicParsing="false" text="Relatórios" />
+      <Button layoutX="131.0" layoutY="347.0" mnemonicParsing="false" text="Button" textFill="#e00d0d" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="347.0" />
+      <Button fx:id="btnSair" layoutX="110.0" layoutY="321.0" mnemonicParsing="false" text="Sair" />
+      <Button fx:id="btnConsulta" layoutX="90.0" layoutY="220.0" mnemonicParsing="false" onAction="#consultaAlimento" text="Consultas" />
+   </children>
+</AnchorPane>
