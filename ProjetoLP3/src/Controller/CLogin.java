@@ -31,14 +31,14 @@ public class CLogin {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrMenuPrincipal.fxml"));
             Pane root = loader.load();
-            Controller.CMenuPrincipal controller = (Controller.CMenuPrincipal) loader.getController();
+            CMenuPrincipal controller = (CMenuPrincipal) loader.getController();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setTitle("Tela 2");
             stage.setScene(scene);
             stage.show();
 
-        }
+    }
 }
 
 
