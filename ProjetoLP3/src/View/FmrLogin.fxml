@@ -5,9 +5,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="231.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CLogin">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="231.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CLogin">
    <children>
-      <Button fx:id="btnLogin" layoutX="31.0" layoutY="276.0" mnemonicParsing="false" onAction="#logim" prefHeight="25.0" prefWidth="75.0" text="Login" />
+      <Button fx:id="btnLogin" layoutX="31.0" layoutY="276.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="75.0" text="Login" />
       <Button fx:id="btnCancelar" layoutX="116.0" layoutY="276.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="84.0" text="Cancelar" />
       <PasswordField layoutX="31.0" layoutY="231.0" prefHeight="25.0" prefWidth="169.0" promptText="Senha" />
       <TextField layoutX="31.0" layoutY="191.0" prefHeight="25.0" prefWidth="169.0" promptText="Usuário" />

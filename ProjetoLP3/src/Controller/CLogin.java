@@ -26,18 +26,19 @@ public class CLogin {
     }
 
     @FXML
-    public void logim() throws IOException {
+    public void login() throws IOException {
 
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrMenuPrincipal.fxml"));
             Pane root = loader.load();
             CMenuPrincipal controller = (CMenuPrincipal) loader.getController();
+            // Fecha a tela
+            ((Stage) btnLogin.getScene().getWindow()).hide();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setTitle("Tela 2");
             stage.setScene(scene);
             stage.show();
-
     }
 }
 
