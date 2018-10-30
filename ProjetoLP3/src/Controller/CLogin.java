@@ -37,7 +37,7 @@ public class CLogin {
             stage.setTitle("Tela 2");
             stage.setScene(scene);
             stage.show();
-
+                //Coemntario Genial
     }
 }
 
