@@ -26,6 +26,6 @@
             <TableColumn prefWidth="182.0" text="Data de Validade" />
         </columns>
       </TableView>
-      <Button fx:id="btnVoltar" layoutX="499.0" layoutY="334.0" mnemonicParsing="false" onAction="#voltaLogin" text="Voltar" />
+      <Button fx:id="btnVoltar" layoutX="499.0" layoutY="334.0" mnemonicParsing="false" onAction="#voltaMenu" text="Voltar" />
    </children>
 </AnchorPane>

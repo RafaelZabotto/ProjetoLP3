@@ -11,33 +11,19 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class CConsultaAlimento {
+public class CConsultaFamilia {
 
     @FXML
-    private TextField txtConsultaAlimento;
+    private TextField txtConsultaMembro;
 
     @FXML
-    private Button btnPesquisarAlimento;
+    private Button btnPesquisarMembro;
 
     @FXML
-    private TableView<?> tableConsultaAlimento;
+    private TableView<?> tableConsultaMembro;
 
     @FXML
     private Button btnVoltar;
-
-    //Ação do botão voltar
-    @FXML
-    public void voltaLogin() throws IOException {
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrMenuPrincipal.fxml"));
-        Pane root = loader.load();
-        Controller.CMenuPrincipal controller = (Controller.CMenuPrincipal) loader.getController();
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setTitle("Tela 2");
-        stage.setScene(scene);
-        stage.show();
-    }
 
     //Botão de voltar
     @FXML
@@ -54,4 +40,6 @@ public class CConsultaAlimento {
         stage.show();
     }
 
+
 }
+

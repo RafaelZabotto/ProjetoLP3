@@ -27,14 +27,18 @@ public class CMenuPrincipal {
     private Button btnSair;
 
     @FXML
-    private Button btnConsulta;
+    private Button btnConsultaAlimento;
 
+    @FXML
+    private Button btnConsultaFamilia;
 
     @FXML
     public void novoAlimento() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrNovoAlimento.fxml"));
         Pane root = loader.load();
         Controller.CNovoAlimento controller = (Controller.CNovoAlimento) loader.getController();
+        // Fecha a tela
+        ((Stage) btnMenuAlimento.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setTitle("Tela 2");
@@ -47,6 +51,8 @@ public class CMenuPrincipal {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrNovaFamilia.fxml"));
         Pane root = loader.load();
         Controller.CCadastroFamilia controller = (Controller.CCadastroFamilia) loader.getController();
+        // Fecha a tela
+        ((Stage) btnMenuFamilias.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setTitle("Tela 2");
@@ -54,11 +60,14 @@ public class CMenuPrincipal {
         stage.show();
     }
 
+    //Botão Cadastrar Usuario
     @FXML
     public void novoUsuario() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FrmNovoUsuario.fxml"));
         Pane root = loader.load();
         Controller.CCadastroUsuario controller = (Controller.CCadastroUsuario) loader.getController();
+        // Fecha a tela
+        ((Stage) btnMenuUsuarios.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setTitle("Tela 2");
@@ -66,16 +75,42 @@ public class CMenuPrincipal {
         stage.show();
     }
 
+    //Botão Consulta Alimento
     @FXML
     public void consultaAlimento() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrConsultaAlimento.fxml"));
         Pane root = loader.load();
         Controller.CConsultaAlimento controller = (Controller.CConsultaAlimento) loader.getController();
+        // Fecha a tela
+        ((Stage) btnConsultaAlimento.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setTitle("Tela 2");
         stage.setScene(scene);
         stage.show();
+    }
+
+    // Botão Consulta Familia
+    @FXML
+    public void consultaFamilia() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrConsultaFamilia.fxml"));
+        Pane root = loader.load();
+        Controller.CConsultaFamilia controller = (Controller.CConsultaFamilia) loader.getController();
+        // Fecha a tela
+        ((Stage) btnConsultaFamilia.getScene().getWindow()).hide();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setTitle("Consultar Familia");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+    //Botão Sair
+    @FXML
+    public void sair() {
+        Stage stage = (Stage) btnSair.getScene().getWindow();
+        stage.close();
     }
 
 }

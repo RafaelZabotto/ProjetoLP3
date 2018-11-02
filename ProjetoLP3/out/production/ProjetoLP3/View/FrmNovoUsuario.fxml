@@ -8,8 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CCadastroUsuario">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CCadastroUsuario">
    <children>
       <Label layoutX="20.0" layoutY="59.0" text="Nome do Usuário" />
       <Label layoutX="20.0" layoutY="98.0" text="CPF" />
@@ -26,7 +25,7 @@
       <DatePicker fx:id="dataNascUser" layoutX="141.0" layoutY="131.0" />
       <TextField fx:id="txtEndereco" layoutX="141.0" layoutY="167.0" prefHeight="26.0" prefWidth="273.0" />
       <TextField fx:id="txtTelefone" layoutX="141.0" layoutY="207.0" prefHeight="26.0" prefWidth="198.0" />
-      <Button fx:id="btnVoltar" layoutX="339.0" layoutY="269.0" mnemonicParsing="false" text="Voltar" />
+      <Button fx:id="btnVoltar" layoutX="339.0" layoutY="269.0" mnemonicParsing="false" onAction="#voltaMenu" text="Voltar" />
       <Button fx:id="btnCadastrarUsuario" layoutX="183.0" layoutY="269.0" mnemonicParsing="false" text="Cadastrar Usuário" />
    </children>
 </AnchorPane>

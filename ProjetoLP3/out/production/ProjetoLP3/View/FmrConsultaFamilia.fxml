@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="374.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CConsultaAlimento">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="374.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CConsultaFamilia">
    <children>
       <Text layoutX="29.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulta de Famílias">
          <font>
@@ -26,6 +26,6 @@
             <TableColumn prefWidth="182.0" text="CPF" />
         </columns>
       </TableView>
-      <Button fx:id="btnVoltar" layoutX="499.0" layoutY="334.0" mnemonicParsing="false" text="Voltar" />
+      <Button fx:id="btnVoltar" layoutX="499.0" layoutY="334.0" mnemonicParsing="false" onAction="#voltaMenu" text="Voltar" />
    </children>
 </AnchorPane>
