@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -30,11 +31,11 @@ public class CLogin {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrMenuPrincipal.fxml"));
         Pane root = loader.load();
         CMenuPrincipal controller = (CMenuPrincipal) loader.getController();
-        // Fecha a tela
-        ((Stage) btnLogin.getScene().getWindow()).hide();
+        ((Stage) btnLogin.getScene().getWindow()).hide();   // Fecha a tela
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        stage.setTitle("Menu");
+        stage.setResizable(false);      //Desabilita o redimensionamento
+        stage.setTitle("Menu ");
         stage.setScene(scene);
         stage.show();
     }

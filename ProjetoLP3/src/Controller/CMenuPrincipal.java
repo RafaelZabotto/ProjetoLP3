@@ -41,7 +41,8 @@ public class CMenuPrincipal {
         ((Stage) btnMenuAlimento.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        stage.setTitle("Tela 2");
+        stage.setResizable(false);      //Desabilita o redimensionamento
+        stage.setTitle("Cadastro de Alimentos");
         stage.setScene(scene);
         stage.show();
     }
@@ -55,7 +56,8 @@ public class CMenuPrincipal {
         ((Stage) btnMenuFamilias.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        stage.setTitle("Tela 2");
+        stage.setResizable(false);      //Desabilita o redimensionamento
+        stage.setTitle("Cadastro de Familias");
         stage.setScene(scene);
         stage.show();
     }
@@ -70,7 +72,8 @@ public class CMenuPrincipal {
         ((Stage) btnMenuUsuarios.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        stage.setTitle("Tela 2");
+        stage.setResizable(false);      //Desabilita o redimensionamento
+        stage.setTitle("Cadastro de Usuários");
         stage.setScene(scene);
         stage.show();
     }
@@ -85,7 +88,8 @@ public class CMenuPrincipal {
         ((Stage) btnConsultaAlimento.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        stage.setTitle("Tela 2");
+        stage.setResizable(false);      //Desabilita o redimensionamento
+        stage.setTitle("Consultar Alimentos");
         stage.setScene(scene);
         stage.show();
     }
@@ -100,7 +104,8 @@ public class CMenuPrincipal {
         ((Stage) btnConsultaFamilia.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
-        stage.setTitle("Consultar Familia");
+        stage.setResizable(false);      //Desabilita o redimensionamento
+        stage.setTitle("Consultar Familias");
         stage.setScene(scene);
         stage.show();
     }

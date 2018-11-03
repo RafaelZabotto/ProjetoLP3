@@ -35,6 +35,7 @@ public class CConsultaFamilia {
         ((Stage) btnVoltar.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
+        stage.setResizable(false);      //Desabilita o redimensionamento
         stage.setTitle("Tela 2");
         stage.setScene(scene);
         stage.show();

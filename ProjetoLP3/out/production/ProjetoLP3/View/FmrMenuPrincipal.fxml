@@ -1,24 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="368.0" prefWidth="263.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CMenuPrincipal">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CMenuPrincipal">
    <children>
-      <Text layoutX="43.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
+      <Button fx:id="btnMenuAlimento" layoutX="59.0" layoutY="92.0" mnemonicParsing="false" onAction="#novoAlimento" prefHeight="28.0" prefWidth="176.0" text="Cadastro de Alimentos">
          <font>
-            <Font size="24.0" />
+            <Font name="Tahoma" size="15.0" />
          </font>
-      </Text>
-      <Button fx:id="btnMenuAlimento" layoutX="48.0" layoutY="66.0" mnemonicParsing="false" onAction="#novoAlimento" text="Cadastro de Alimentos" />
-      <Button fx:id="btnMenuUsuarios" layoutX="54.0" layoutY="171.0" mnemonicParsing="false" onAction="#novoUsuario" text="Cadastro de Usuários" />
-      <Button fx:id="btnMenuFamilias" layoutX="55.0" layoutY="120.0" mnemonicParsing="false" onAction="#novaFamilia" text="Cadastro de Famílias" />
-      <Button fx:id="btnMenuRelatorio" layoutX="84.0" layoutY="296.0" mnemonicParsing="false" text="Relatórios" />
-      <Button layoutX="131.0" layoutY="347.0" mnemonicParsing="false" text="Button" textFill="#e00d0d" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="347.0" />
-      <Button fx:id="btnSair" layoutX="101.0" layoutY="335.0" mnemonicParsing="false" onAction="#sair" text="Sair" />
-      <Button fx:id="btnConsultaAlimento" layoutX="60.0" layoutY="212.0" mnemonicParsing="false" onAction="#consultaAlimento" text="Consulta Alimento" />
-      <Button fx:id="btnConsultaFamilia" layoutX="60.0" layoutY="246.0" mnemonicParsing="false" onAction="#consultaFamilia" text="Consulta Familia" />
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMenuUsuarios" layoutX="59.0" layoutY="168.0" mnemonicParsing="false" onAction="#novoUsuario" prefHeight="28.0" prefWidth="176.0" text="Cadastro de Usuários">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMenuFamilias" layoutX="59.0" layoutY="130.0" mnemonicParsing="false" onAction="#novaFamilia" prefHeight="28.0" prefWidth="176.0" text="Cadastro de Famílias">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnMenuRelatorio" layoutX="59.0" layoutY="281.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="176.0" text="Relatórios">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnSair" layoutX="95.0" layoutY="337.0" mnemonicParsing="false" onAction="#sair" text="Sair">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnConsultaAlimento" layoutX="59.0" layoutY="206.0" mnemonicParsing="false" onAction="#consultaAlimento" prefHeight="28.0" prefWidth="176.0" text="Consulta Alimento">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnConsultaFamilia" layoutX="59.0" layoutY="243.0" mnemonicParsing="false" onAction="#consultaFamilia" prefHeight="28.0" prefWidth="176.0" text="Consulta Familia">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Pane prefHeight="70.0" prefWidth="294.0" style="-fx-background-color: #00A2E8;">
+         <children>
+            <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
+               <font>
+                  <Font name="Heineken" size="36.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Pane layoutX="-1.0" layoutY="396.0" prefHeight="30.0" prefWidth="294.0" style="-fx-background-color: #00A2E8;" />
    </children>
 </AnchorPane>
