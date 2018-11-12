@@ -84,8 +84,8 @@ public class conexao {
                 +"tipo VARCHAR(100),"
                 +"data_validade DATE,"
                 +"id_usuario INTEGER,"
-                +"CONSTRAINT pk alimento PRIMARY KEY (id_alimento),"
-                +"CONSTRAINT fk_usuario"
+                +"CONSTRAINT pk_alimento PRIMARY KEY (id_alimento),"
+                +"CONSTRAINT fk_usuario FOREIGN KEY (id_usuario) references usuario(id_usuario));";
 
 
             statement.executeUpdate(sql);
@@ -93,7 +93,7 @@ public class conexao {
             /* Beneficiado */
 
             sql = "CREATE TABLE IF NOT EXISTS beneficiado("
-                +"id_beneficiado INTEGER AUTO INCREMENT NOT NULL,"
+                +"id_beneficiado INTEGER AUTO_INCREMENT NOT NULL,"
                 +"nome_beneficiado VARCHAR(100) NOT NULL,"
                 +"numero INTEGER,"
                 +"rua VARCHAR(100),"
@@ -106,7 +106,7 @@ public class conexao {
                 +"data_cadastro_usuario DATE,"
                 +"profissao VARCHAR(100),"
                 +"id_usuario INTEGER(5),"
-                +"CONSTRAINT pk beneficiado PRIMARY KEY (id_beneficiado),";
+                +"CONSTRAINT pk_beneficiado PRIMARY KEY (id_beneficiado));";
 
 
             statement.executeUpdate(sql);
@@ -118,7 +118,8 @@ public class conexao {
                 +"parentesco VARCHAR(100),"
                 +"data_nasc DATE,"
                 +"profissao_dependente VARCHAR(100),"
-                +"id_beneficiado INTEGER,";
+                +"id_beneficiado INTEGER,"
+                +"CONSTRAINT fk_beneficiado FOREIGN KEY (id_beneficiado) references beneficiado(id_beneficiado));";
 
 
             statement.executeUpdate(sql);
@@ -131,9 +132,9 @@ public class conexao {
                  +"id_beneficiado INTEGER NOT NULL,"
                  +"data_montagem DATE NOT NULL,"
                  +"data_recebimento DATE NOT NULL,"
-                 +"CONSTRAINT pk_cesta PRIMARY KEY (id_cesta),";
-                 +"CONSTRAINT fk usuario FOREIGN KEY (id_usuario) references usuario(id_usuario),"
-                 +"CONSTRAINT fk beneficiado FOREIGN KEY (id_usuario) references usuario(id_usuario));";
+                 +"CONSTRAINT pk_cesta1 PRIMARY KEY (id_cesta),"
+                 +"CONSTRAINT fk_usuario1 FOREIGN KEY (id_usuario) references usuario(id_usuario),"
+                 +"CONSTRAINT fk_beneficiado1 FOREIGN KEY (id_beneficiado) references beneficiado(id_beneficiado));";
 
 
             statement.executeUpdate(sql);
@@ -142,10 +143,10 @@ public class conexao {
 
             sql = "CREATE TABLE IF NOT EXISTS cesta_alimento("
                   +"id_cesta INTEGER NOT NULL,"
-                  +"id_alimento INTERGER NOT NULL,"
+                  +"id_alimento INTEGER NOT NULL,"
                   +"quantidade INTEGER NOT NULL,"
-//                  +"CONSTRAINT fk cesta FOREIGN KEY (id_cesta) references cesta(id_cesta),"
-//                  +"CONSTRAINT fk alimento FOREIGN KEY (id_alimento) references alimento(id_alimento));";
+                  +"CONSTRAINT fk_cesta2 FOREIGN KEY (id_cesta) references cesta(id_cesta),"
+                  +"CONSTRAINT fk_alimento2 FOREIGN KEY (id_alimento) references alimento(id_alimento));";
 
             statement.executeUpdate(sql);
 
@@ -153,13 +154,13 @@ public class conexao {
 
             sql = "CREATE TABLE IF NOT EXISTS tipo("
                  +"id_tipo INTEGER AUTO_INCREMENT NOT NULL,"
-                 +"nome_tipo VARCHAR NOT NULL,"
-                 +"CONSTRAINT pk tipo PRIMARY KEY (id_tipo));";
+                 +"nome_tipo VARCHAR(100) NOT NULL,"
+                 +"CONSTRAINT pk_tipo PRIMARY KEY (id_tipo));";
 
             statement.executeUpdate(sql);
 
             /* Adiciona um administrador padrão para o sistema */
-            sql = "INSERT INTO Funcionario VALUES (null, 'ADMINISTRADOR', 'admin', '1234', 1);";
+            //sql = "INSERT INTO  VALUES (null, 'ADMINISTRADOR', 'admin', '1234', 1);";
 
             statement.executeUpdate(sql);
 
