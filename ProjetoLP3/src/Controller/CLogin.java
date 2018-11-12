@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.database.conexao;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,6 +10,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.Connection;
 
 public class CLogin {
 
@@ -28,6 +30,7 @@ public class CLogin {
     //Botão de Login
     @FXML
     public void login() throws IOException {
+        Connection conn = new conexao().getConexao();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrMenuPrincipal.fxml"));
         Pane root = loader.load();
         CMenuPrincipal controller = (CMenuPrincipal) loader.getController();

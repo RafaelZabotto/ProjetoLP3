@@ -7,9 +7,15 @@ import java.sql.Statement;
 
 public class conexao {
 
-    private final String BD = "jdbc:mysql://localhost/hotel";
+//    private final String BD = "jdbc:mysql://localhost/instituicao";
+//    private final String USER = "root";
+//    private final String PASSWORD = "";
+
+    private final String BD = "jdbc:mysql://localhost/instituicao";
     private final String USER = "root";
     private final String PASSWORD = "";
+
+
 
     public Connection getConexao() {
 
@@ -52,7 +58,7 @@ public class conexao {
 
             Statement statement = conexao.createStatement();
 
-            statement.executeUpdate("CREATE DATABASE IF NOT EXISTS hotel;");
+            statement.executeUpdate("CREATE DATABASE IF NOT EXISTS instituicao;");
 
             /* Criação das tabelas */
 
@@ -60,27 +66,98 @@ public class conexao {
 
             statement = conexao.createStatement();
 
-            /* Cliente */
-            String sql = "CREATE TABLE IF NOT EXISTS Cliente("
-                    + "codigo INTEGER AUTO_INCREMENT NOT NULL,"
-                    + "nome VARCHAR(64) NOT NULL,"
-                    + "cpf VARCHAR(14) NOT NULL,"
-                    + "telefone VARCHAR(19) NOT NULL,"
-                    + "email VARCHAR(64) NOT NULL,"
-                    + "CONSTRAINT pk_cliente PRIMARY KEY (codigo),"
-                    + "CONSTRAINT un_cliente_cpf UNIQUE(cpf));";
+            /* Usuario */
+
+            String sql = "CREATE TABLE IF NOT EXISTS usuario("
+                + "id_usuario INTEGER AUTO_INCREMENT NOT NULL,"
+                + "nome_usuario VARCHAR(100) NOT NULL,"
+                + "telefone_usuario VARCHAR(15),"
+                + "cpf_usuario VARCHAR(15) NOT NULL,"
+                + "nome_login_senha VARCHAR(20) NOT NULL,"
+                + "senha_usuario VARCHAR(20) NOT NULL,"
+                + "data_cadastro_user DATE,"
+                + "CONSTRAINT pk usuario PRIMARY KEY (id_usuario)";
 
             statement.executeUpdate(sql);
 
-            /* Funcionario */
-            sql = "CREATE TABLE IF NOT EXISTS Funcionario("
-                    + "codigo INTEGER AUTO_INCREMENT NOT NULL,"
-                    + "nome VARCHAR(64) NOT NULL,"
-                    + "usuario VARCHAR(64) NOT NULL,"
-                    + "senha VARCHAR(64) NOT NULL,"
-                    + "funcao INTEGER NOT NULL,"
-                    + "CONSTRAINT pk_funcionario PRIMARY KEY (codigo),"
-                    + "CONSTRAINT un_funcionario_usuario UNIQUE (usuario));";
+            /* Alimento */
+
+            sql = "CREATE TABLE IF NOT EXISTS alimento("
+                +"id_alimento INTEGER AUTO INCREMENT NOT NULL,"
+                +"nome_alimento VARCHAR(100) NOT NULL,"
+                +"tipo VARCHAR(100),"
+                +"data_validade DATE,"
+                +"id_usuario INTEGER,"
+                +"CONSTRAINT pk alimento PRIMARY KEY (id_alimento),"
+                +"CONSTRAINT fk usuario FOREIGN KEY (id_usuario) references usuario(id_usuario));";
+
+            statement.executeUpdate(sql);
+
+            /* Beneficiado */
+
+            sql = "CREATE TABLE IF NOT EXISTS beneficiado("
+                +"id_beneficiado INTEGER AUTO INCREMENT NOT NULL,"
+                +"nome_beneficiado VARCHAR(100) NOT NULL,"
+                +"numero INTEGER,"
+                +"rua VARCHAR(100),"
+                +"bairro VARCHAR(100),"
+                +"cidade VARCHAR(100),"
+                +"estado VARCHAR(2),"
+                +"telefone_beneficiado VARCHAR(20),"
+                +"data_nasc DATE,"
+                +"possui_dependente INTEGER(1),"
+                +"data_cadastro_usuario DATE,"
+                +"profissao VARCHAR(100),"
+                +"id_usuario INTEGER(5),"
+                +"CONSTRAINT pk beneficiado PRIMARY KEY (id_beneficiado),"
+                +"CONSTRAINT fk usuario FOREIGN KEY (id_usuario) references usuario(id_usuario));";
+
+            statement.executeUpdate(sql);
+
+            /* Dependente */
+
+            sql = "CREATE TABLE IF NOT EXISTS dependente("
+                +"nome_dependente INTEGER,"
+                +"parentesco VARCHAR(100),"
+                +"data_nasc DATE,"
+                +"profissao_dependente VARCHAR(100),"
+                +"id_beneficiado INTEGER,"
+                    +"CONSTRAINT fk usuario FOREIGN KEY (id_usuario) references usuario(id_usuario));";
+
+            statement.executeUpdate(sql);
+
+            /* Cesta */
+
+            sql = "CREATE TABLE IF NOT EXISTS cesta("
+                 +"id_cesta INTEGER AUTO_INCREMENT NOT NULL,"
+                 +"id_usuario INTEGER NOT NULL,"
+                 +"id_beneficiado INTEGER NOT NULL,"
+                 +"data_montagem DATE NOT NULL,"
+                 +"data_recebimento DATE NOT NULL,"
+                 +"CONSTRAINT pk cesta PRIMARY KEY (id_cesta),"
+                 +"CONSTRAINT fk usuario FOREIGN KEY (id_usuario) references usuario(id_usuario),"
+                 +"CONSTRAINT fk beneficiado FOREIGN KEY (id_usuario) references usuario(id_usuario));";
+
+
+            statement.executeUpdate(sql);
+
+            /*Interação dos alimentos com a cesta */
+
+            sql = "CREATE TABLE IF NOT EXISTS cesta_alimento("
+                  +"id_cesta INTEGER NOT NULL,"
+                  +"id_alimento INTERGER NOT NULL,"
+                  +"quantidade INTEGER NOT NULL,"
+                  +"CONSTRAINT fk cesta FOREIGN KEY (id_cesta) references cesta(id_cesta),"
+                  +"CONSTRAINT fk alimento FOREIGN KEY (id_alimento) references alimento(id_alimento));";
+
+            statement.executeUpdate(sql);
+
+            /* Tipo de alimento */
+
+            sql = "CREATE TABLE IF NOT EXISTS tipo("
+                 +"id_tipo INTEGER AUTO_INCREMENT NOT NULL,"
+                 +"nome_tipo VARCHAR NOT NULL,"
+                 +"CONSTRAINT pk tipo PRIMARY KEY (id_tipo));";
 
             statement.executeUpdate(sql);
 
