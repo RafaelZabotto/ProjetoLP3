@@ -13,7 +13,7 @@ public class conexao {
 
     private final String BD = "jdbc:mysql://localhost/instituicao";
     private final String USER = "root";
-    private final String PASSWORD = "";
+    private final String PASSWORD = "password";
 
 
 
@@ -76,20 +76,21 @@ public class conexao {
                 + "nome_login_senha VARCHAR(20) NOT NULL,"
                 + "senha_usuario VARCHAR(20) NOT NULL,"
                 + "data_cadastro_user DATE,"
-                + "CONSTRAINT pk usuario PRIMARY KEY (id_usuario)";
+                + "CONSTRAINT pk_usuario PRIMARY KEY (id_usuario));";
 
             statement.executeUpdate(sql);
 
             /* Alimento */
 
             sql = "CREATE TABLE IF NOT EXISTS alimento("
-                +"id_alimento INTEGER AUTO INCREMENT NOT NULL,"
+                +"id_alimento INTEGER AUTO_INCREMENT NOT NULL,"
                 +"nome_alimento VARCHAR(100) NOT NULL,"
                 +"tipo VARCHAR(100),"
                 +"data_validade DATE,"
                 +"id_usuario INTEGER,"
                 +"CONSTRAINT pk alimento PRIMARY KEY (id_alimento),"
-                +"CONSTRAINT fk usuario FOREIGN KEY (id_usuario) references usuario(id_usuario));";
+                +"CONSTRAINT fk_usuario"
+
 
             statement.executeUpdate(sql);
 
@@ -109,8 +110,8 @@ public class conexao {
                 +"data_cadastro_usuario DATE,"
                 +"profissao VARCHAR(100),"
                 +"id_usuario INTEGER(5),"
-                +"CONSTRAINT pk beneficiado PRIMARY KEY (id_beneficiado),"
-                +"CONSTRAINT fk usuario FOREIGN KEY (id_usuario) references usuario(id_usuario));";
+                +"CONSTRAINT pk beneficiado PRIMARY KEY (id_beneficiado),";
+
 
             statement.executeUpdate(sql);
 
@@ -121,8 +122,8 @@ public class conexao {
                 +"parentesco VARCHAR(100),"
                 +"data_nasc DATE,"
                 +"profissao_dependente VARCHAR(100),"
-                +"id_beneficiado INTEGER,"
-                    +"CONSTRAINT fk usuario FOREIGN KEY (id_usuario) references usuario(id_usuario));";
+                +"id_beneficiado INTEGER,";
+
 
             statement.executeUpdate(sql);
 
@@ -134,7 +135,7 @@ public class conexao {
                  +"id_beneficiado INTEGER NOT NULL,"
                  +"data_montagem DATE NOT NULL,"
                  +"data_recebimento DATE NOT NULL,"
-                 +"CONSTRAINT pk cesta PRIMARY KEY (id_cesta),"
+                 +"CONSTRAINT pk_cesta PRIMARY KEY (id_cesta),";
                  +"CONSTRAINT fk usuario FOREIGN KEY (id_usuario) references usuario(id_usuario),"
                  +"CONSTRAINT fk beneficiado FOREIGN KEY (id_usuario) references usuario(id_usuario));";
 
@@ -147,8 +148,8 @@ public class conexao {
                   +"id_cesta INTEGER NOT NULL,"
                   +"id_alimento INTERGER NOT NULL,"
                   +"quantidade INTEGER NOT NULL,"
-                  +"CONSTRAINT fk cesta FOREIGN KEY (id_cesta) references cesta(id_cesta),"
-                  +"CONSTRAINT fk alimento FOREIGN KEY (id_alimento) references alimento(id_alimento));";
+//                  +"CONSTRAINT fk cesta FOREIGN KEY (id_cesta) references cesta(id_cesta),"
+//                  +"CONSTRAINT fk alimento FOREIGN KEY (id_alimento) references alimento(id_alimento));";
 
             statement.executeUpdate(sql);
 
