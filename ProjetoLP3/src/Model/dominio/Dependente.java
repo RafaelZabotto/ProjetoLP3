@@ -2,7 +2,7 @@ package Model.dominio;
 
 import java.util.Date;
 
-public class dependente {
+public class Dependente {
 
     private String nome;
     private String parentesco;

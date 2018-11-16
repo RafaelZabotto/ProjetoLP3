@@ -21,7 +21,10 @@ public class CMenuPrincipal {
     private Button btnMenuFamilias;
 
     @FXML
-    private Button btnMenuRelatorio;
+    private Button btnRelatorioValidade;
+
+    @FXML
+    private Button btnRelatorioEstoque;
 
     @FXML
     private Button btnSair;

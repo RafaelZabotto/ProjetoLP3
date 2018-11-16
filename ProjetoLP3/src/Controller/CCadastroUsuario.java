@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.DAO.UsuarioDAO;
+import Model.dominio.Usuario;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -20,19 +22,15 @@ public class CCadastroUsuario {
     private TextField txtCPF;
 
     @FXML
-    private DatePicker dataNascUser;
-
-    @FXML
-    private TextField txtEndereco;
-
-    @FXML
     private TextField txtTelefone;
 
     @FXML
-    private Button btnVoltar;
+    private TextField txtNomeUsuario1;
+    @FXML
+    private TextField txtSenha;
 
     @FXML
-    private Button btnCadastrarUsuario;
+    private Button btnVoltar;
 
     //Botão de voltar
     @FXML
@@ -48,6 +46,25 @@ public class CCadastroUsuario {
         stage.setTitle("Tela 2");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    public void CadastraUsuario() throws IOException{
+
+        Usuario u = new Usuario();
+        UsuarioDAO dao = new UsuarioDAO();
+
+        u.setNome(txtNomeUsuario.getText());
+        u.setCpf(txtCPF.getText());
+        u.setTelefone(txtTelefone.getText());
+        u.setNome_login_usuario(txtNomeUsuario1.getText());
+        u.setSenha_usuario(txtSenha.getText());
+
+        dao.inserir(u);
+    }
+
+    public void ConsultaUsuario() throws IOException{
+
     }
 
 }

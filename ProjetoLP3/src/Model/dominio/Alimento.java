@@ -2,7 +2,7 @@ package Model.dominio;
 
 import java.util.Date;
 
-public class alimento {
+public class Alimento {
 
     private String nome;
     private Date data_validade;

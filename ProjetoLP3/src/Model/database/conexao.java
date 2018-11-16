@@ -69,9 +69,10 @@ public class conexao {
                 + "nome_usuario VARCHAR(100) NOT NULL,"
                 + "telefone_usuario VARCHAR(15),"
                 + "cpf_usuario VARCHAR(15) NOT NULL,"
-                + "nome_login_senha VARCHAR(20) NOT NULL,"
+                + "nome_login VARCHAR(20) NOT NULL,"
                 + "senha_usuario VARCHAR(20) NOT NULL,"
-                + "data_cadastro_user DATE,"
+                + "data_cadastro_user timestamp default current_timestamp(),"
+                + "usuario_excluido INTEGER DEFAULT 0 NOT NULL,"
                 + "CONSTRAINT pk_usuario PRIMARY KEY (id_usuario));";
 
             statement.executeUpdate(sql);
@@ -84,6 +85,7 @@ public class conexao {
                 +"tipo VARCHAR(100),"
                 +"data_validade DATE,"
                 +"id_usuario INTEGER,"
+                +"alimento_doado INTEGER DEFAULT 0 NOT NULL,"
                 +"CONSTRAINT pk_alimento PRIMARY KEY (id_alimento),"
                 +"CONSTRAINT fk_usuario FOREIGN KEY (id_usuario) references usuario(id_usuario));";
 
@@ -95,31 +97,21 @@ public class conexao {
             sql = "CREATE TABLE IF NOT EXISTS beneficiado("
                 +"id_beneficiado INTEGER AUTO_INCREMENT NOT NULL,"
                 +"nome_beneficiado VARCHAR(100) NOT NULL,"
-                +"numero INTEGER,"
-                +"rua VARCHAR(100),"
-                +"bairro VARCHAR(100),"
-                +"cidade VARCHAR(100),"
-                +"estado VARCHAR(2),"
+                +"numero INTEGER NOT NULL,"
+                +"rua VARCHAR(100) NOT NULL,"
+                +"bairro VARCHAR(100) NOT NULL,"
+                +"cidade VARCHAR(100) NOT NULL,"
+                +"estado VARCHAR(2) NOT NULL,"
                 +"telefone_beneficiado VARCHAR(20),"
                 +"data_nasc DATE,"
-                +"possui_dependente INTEGER(1),"
-                +"data_cadastro_usuario DATE,"
+                +"possui_dependente INTEGER(1) NOT NULL DEFAULT 0,"
+                +"data_cadastro_beneficiado timestamp default current_timestamp(),"
                 +"profissao VARCHAR(100),"
+                +"beneficiado_excluido INTEGER DEFAULT 0 NOT NULL,"
+                +"beneficiado_descricao VARCHAR(255),"
                 +"id_usuario INTEGER(5),"
-                +"CONSTRAINT pk_beneficiado PRIMARY KEY (id_beneficiado));";
-
-
-            statement.executeUpdate(sql);
-
-            /* Dependente */
-
-            sql = "CREATE TABLE IF NOT EXISTS dependente("
-                +"nome_dependente INTEGER,"
-                +"parentesco VARCHAR(100),"
-                +"data_nasc DATE,"
-                +"profissao_dependente VARCHAR(100),"
-                +"id_beneficiado INTEGER,"
-                +"CONSTRAINT fk_beneficiado FOREIGN KEY (id_beneficiado) references beneficiado(id_beneficiado));";
+                +"CONSTRAINT pk_beneficiado PRIMARY KEY (id_beneficiado),"
+                +"CONSTRAINT fk_usuario2 FOREIGN KEY (id_usuario) references usuario(id_usuario));";
 
 
             statement.executeUpdate(sql);

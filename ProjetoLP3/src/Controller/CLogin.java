@@ -30,7 +30,7 @@ public class CLogin {
     //Botão de Login
     @FXML
     public void login() throws IOException {
-        //Connection conn = new conexao().getConexao();
+        Connection conn = new conexao().getConexao();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrMenuPrincipal.fxml"));
         Pane root = loader.load();
         CMenuPrincipal controller = (CMenuPrincipal) loader.getController();

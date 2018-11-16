@@ -2,7 +2,7 @@ package Model.dominio;
 
 import java.util.Date;
 
-public class beneficiado {
+public class Beneficiado {
 
     private String nome;
     private Date data_nasc;

@@ -1,6 +1,6 @@
 package Model.dominio;
 
-public class tipo {
+public class Tipo {
 
     private int quantidade;
 

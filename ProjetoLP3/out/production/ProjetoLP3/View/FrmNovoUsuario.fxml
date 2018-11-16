@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CCadastroUsuario">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CCadastroUsuario">
    <children>
       <Label layoutX="21.0" layoutY="98.0" text="Nome ">
          <font>
@@ -31,7 +31,7 @@
          <font>
             <Font name="Tahoma" size="15.0" />
          </font></Label>
-      <TextField fx:id="txtEndereco" layoutX="19.0" layoutY="225.0" prefHeight="26.0" prefWidth="239.0">
+      <TextField fx:id="txtTelefone" layoutX="19.0" layoutY="225.0" prefHeight="26.0" prefWidth="239.0">
          <font>
             <Font name="Tahoma" size="14.0" />
          </font></TextField>
@@ -50,7 +50,7 @@
             <Font name="Tahoma" size="15.0" />
          </font>
       </Label>
-      <PasswordField layoutX="18.0" layoutY="333.0" prefHeight="28.0" prefWidth="239.0" promptText="Digite uma senha">
+      <PasswordField fx:id="txtSenha" layoutX="18.0" layoutY="333.0" prefHeight="28.0" prefWidth="239.0" promptText="Digite uma senha">
          <font>
             <Font name="Tahoma" size="14.0" />
          </font>
@@ -65,7 +65,7 @@
             <Font name="Tahoma" size="14.0" />
          </font>
       </PasswordField>
-      <Button fx:id="btnCadastrarUsuario" layoutX="47.0" layoutY="434.0" mnemonicParsing="false" text="Cadastrar Usuário">
+      <Button fx:id="btnCadastrarUsuario" layoutX="47.0" layoutY="434.0" mnemonicParsing="false" onAction="#CadastraUsuario" text="Cadastrar Usuário">
          <font>
             <Font name="Tahoma" size="14.0" />
          </font></Button>

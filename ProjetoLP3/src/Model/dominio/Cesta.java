@@ -1,6 +1,6 @@
 package Model.dominio;
 
-public class cesta {
+public class Cesta {
 
     private int quantidade;
 

@@ -5,19 +5,24 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="368.0" prefWidth="263.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CMenuPrincipal">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CMenuPrincipal">
    <children>
-      <Text layoutX="43.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
+      <Text layoutX="284.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="btnMenuAlimento" layoutX="48.0" layoutY="66.0" mnemonicParsing="false" text="Cadastro de Alimentos" />
-      <Button fx:id="btnMenuUsuarios" layoutX="54.0" layoutY="171.0" mnemonicParsing="false" text="Cadastro de Usuários" />
-      <Button fx:id="btnMenuFamilias" layoutX="55.0" layoutY="120.0" mnemonicParsing="false" text="Cadastro de Famílias" />
-      <Button fx:id="btnMenuRelatorio" layoutX="89.0" layoutY="261.0" mnemonicParsing="false" text="Relatórios" />
-      <Button layoutX="131.0" layoutY="347.0" mnemonicParsing="false" text="Button" textFill="#e00d0d" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="347.0" />
-      <Button fx:id="btnSair" layoutX="110.0" layoutY="321.0" mnemonicParsing="false" text="Sair" />
-      <Button fx:id="btnConsulta" layoutX="90.0" layoutY="220.0" mnemonicParsing="false" text="Consultas" />
+      <Button fx:id="btnMenuAlimento" layoutX="42.0" layoutY="95.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Cadastr de Alimento" />
+      <Button fx:id="btnMenuUsuarios" layoutX="507.0" layoutY="95.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Cadastrar de Usuário" />
+      <Button fx:id="btnMenuFamilias" layoutX="276.0" layoutY="95.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Cadastrar de Família" />
+      <Button fx:id="btnRelatorioValidade" layoutX="147.0" layoutY="320.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Relatório de Validade" />
+      <Button fx:id="btnSair" layoutX="624.0" layoutY="424.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="101.0" text="Sair" textAlignment="CENTER" textFill="#d70505">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="btnConsultaAlimento" layoutX="42.0" layoutY="206.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Consultar Alimento" />
+      <Button fx:id="btnConsultaFamilia" layoutX="277.0" layoutY="206.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Consultar Família" />
+      <Button fx:id="btnConsultarUsuario" layoutX="507.0" layoutY="206.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Consultar Usuário" />
+      <Button fx:id="btnRelatorioEstoque" layoutX="401.0" layoutY="320.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Relatório de Estoque" />
    </children>
 </AnchorPane>

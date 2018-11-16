@@ -1,10 +1,22 @@
 package Model.dominio;
 
-public class usuario {
+public class Usuario {
 
-        private String nome;
-        private String cpf;
-        private String nome_login_usuario;
+    private String nome;
+    private String cpf;
+    private String telefone;
+    private String nome_login_usuario;
+    private String senha_usuario;
+
+
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 
     public String getNome() {
         return nome;
@@ -37,7 +49,5 @@ public class usuario {
     public void setSenha_usuario(String senha_usuario) {
         this.senha_usuario = senha_usuario;
     }
-
-    private String senha_usuario;
 
 }
