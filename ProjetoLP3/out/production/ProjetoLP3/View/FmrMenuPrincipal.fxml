@@ -22,7 +22,7 @@
          </font></Button>
       <Button fx:id="btnConsultaAlimento" layoutX="42.0" layoutY="206.0" mnemonicParsing="false" onAction="#consultaAlimento" prefHeight="79.0" prefWidth="192.0" text="Consultar Alimento" />
       <Button fx:id="btnConsultaFamilia" layoutX="277.0" layoutY="206.0" mnemonicParsing="false" onAction="#consultaFamilia" prefHeight="79.0" prefWidth="192.0" text="Consultar Família" />
-      <Button fx:id="btnConsultarUsuario" layoutX="507.0" layoutY="206.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Consultar Usuário" />
+      <Button fx:id="btnConsultaUsuario" layoutX="507.0" layoutY="206.0" mnemonicParsing="false" onAction="#consultaUsuario" prefHeight="79.0" prefWidth="192.0" text="Consultar Usuário" />
       <Button fx:id="btnRelatorioEstoque" layoutX="401.0" layoutY="320.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="192.0" text="Relatório de Estoque" />
    </children>
 </AnchorPane>

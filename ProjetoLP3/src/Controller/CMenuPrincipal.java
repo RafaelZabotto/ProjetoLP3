@@ -36,6 +36,9 @@ public class CMenuPrincipal {
     private Button btnConsultaFamilia;
 
     @FXML
+    private Button btnConsultaUsuario;
+
+    @FXML
     public void novoAlimento() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrNovoAlimento.fxml"));
         Pane root = loader.load();
@@ -68,7 +71,7 @@ public class CMenuPrincipal {
     //Botão Cadastrar Usuario
     @FXML
     public void novoUsuario() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FrmNovoUsuario.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/teste.fxml"));
         Pane root = loader.load();
         Controller.CCadastroUsuario controller = (Controller.CCadastroUsuario) loader.getController();
         // Fecha a tela
@@ -88,7 +91,7 @@ public class CMenuPrincipal {
         Pane root = loader.load();
         Controller.CConsultaAlimento controller = (Controller.CConsultaAlimento) loader.getController();
         // Fecha a tela
-        ((Stage) btnConsultaAlimento.getScene().getWindow()).hide();
+        ((Stage) btnConsultaUsuario.getScene().getWindow()).hide();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setResizable(false);      //Desabilita o redimensionamento
@@ -111,6 +114,22 @@ public class CMenuPrincipal {
         stage.setTitle("Consultar Familias");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    public void consultaUsuario() throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrConsultaUsuario.fxml"));
+        Pane root = loader.load();
+        Controller.CConsultaUsuario controller = (Controller.CConsultaUsuario) loader.getController();
+        // Fecha a tela
+        ((Stage) btnConsultaUsuario.getScene().getWindow()).hide();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.setResizable(false);      //Desabilita o redimensionamento
+        stage.setTitle("Consultar Usuário");
+        stage.setScene(scene);
+        stage.show();
+
     }
 
 

@@ -2,20 +2,28 @@ package Model.dominio;
 
 public class Usuario {
 
+    private int codigo;
     private String nome;
-    private String cpf;
+    private String endereco;
     private String telefone;
+    private String cpf;
     private String nome_login_usuario;
     private String senha_usuario;
 
-
-
-    public String getTelefone() {
-        return telefone;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public String getNome() {
@@ -32,6 +40,14 @@ public class Usuario {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getNome_login_usuario() {

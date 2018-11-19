@@ -30,18 +30,19 @@ public class UsuarioDAO {
 
         /*SQL de inserção*/
 
-        String sql = "INSERT INTO usuario (nome_usuario, telefone_usuario, cpf_usuario, nome_login, senha_usuario)" +
-                "VALUES(?,?,?,?,?);";
+        String sql = "INSERT INTO usuario (nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, nome_login, senha_usuario)" +
+                "VALUES(?,?,?,?,?,?);";
 
         try {
 
             /* Prepara o comando e insere os parâmetros */
             PreparedStatement statement = connect.prepareStatement(sql);
             statement.setString(1, usuario.getNome());
-            statement.setString(2, usuario.getCpf());
+            statement.setString(2, usuario.getEndereco());
             statement.setString(3, usuario.getTelefone());
-            statement.setString(4, usuario.getNome_login_usuario());
-            statement.setString(5, usuario.getSenha_usuario());
+            statement.setString(4, usuario.getCpf());
+            statement.setString(5, usuario.getNome_login_usuario());
+            statement.setString(6, usuario.getSenha_usuario());
 
             /* Executa o comando */
             statement.execute();
@@ -69,7 +70,7 @@ public class UsuarioDAO {
         ArrayList<Usuario> listaUsuario = new ArrayList<>();
 
         /* Comando SQL */
-        String sql = "SELECT * FROM Cliente;";
+        String sql = "SELECT * FROM usuario;";
 
         try {
 
@@ -85,11 +86,10 @@ public class UsuarioDAO {
                 /* Cria um objeto usuario e passa as informações lidas para ele */
                 Usuario usuario = new Usuario();
 
-                usuario.setNome(resultado.getString(1));
+
                 usuario.setNome(resultado.getString(2));
                 usuario.setCpf(resultado.getString(3));
                 usuario.setTelefone(resultado.getString(4));
-                usuario.setNome(resultado.getString(5));
 
                 /* Adiciona o cliente no array list */
                 listaUsuario.add(usuario);

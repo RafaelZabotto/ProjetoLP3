@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -22,10 +21,14 @@ public class CCadastroUsuario {
     private TextField txtCPF;
 
     @FXML
+    private TextField txtEnderecoUsuario;
+
+    @FXML
     private TextField txtTelefone;
 
     @FXML
-    private TextField txtNomeUsuario1;
+    private TextField txtNomeUsuarioLogin;
+
     @FXML
     private TextField txtSenha;
 
@@ -55,16 +58,24 @@ public class CCadastroUsuario {
         UsuarioDAO dao = new UsuarioDAO();
 
         u.setNome(txtNomeUsuario.getText());
-        u.setCpf(txtCPF.getText());
+        u.setEndereco(txtEnderecoUsuario.getText());
         u.setTelefone(txtTelefone.getText());
-        u.setNome_login_usuario(txtNomeUsuario1.getText());
+        u.setCpf(txtCPF.getText());
+        u.setNome_login_usuario(txtNomeUsuarioLogin.getText());
         u.setSenha_usuario(txtSenha.getText());
 
         dao.inserir(u);
     }
 
-    public void ConsultaUsuario() throws IOException{
+    @FXML
+    public void atualizaUsuario(){
 
     }
+
+    @FXML
+    public void excluiUsuario(){
+
+    }
+
 
 }

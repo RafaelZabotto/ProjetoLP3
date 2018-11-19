@@ -8,8 +8,8 @@ import java.sql.Statement;
 public class conexao {
 
     private final String BD = "jdbc:mysql://localhost/instituicao";
-    private final String USER = "";
-    private final String PASSWORD = "";
+    private final String USER = "root";
+    private final String PASSWORD = "password";
 
 
 
@@ -67,6 +67,7 @@ public class conexao {
             String sql = "CREATE TABLE IF NOT EXISTS usuario("
                 + "id_usuario INTEGER AUTO_INCREMENT NOT NULL,"
                 + "nome_usuario VARCHAR(100) NOT NULL,"
+                + "endereco_usuario VARCHAR(100) NOT NULL,"
                 + "telefone_usuario VARCHAR(15),"
                 + "cpf_usuario VARCHAR(15) NOT NULL,"
                 + "nome_login VARCHAR(20) NOT NULL,"
