@@ -49,7 +49,7 @@ public class UsuarioDAO {
 
             statement.close();
 
-            JOptionPane.showMessageDialog(null, "Usuário salvo com sucesso!");
+
 
             /* Indica que o comando foi executado */
             executou = true;
@@ -87,9 +87,9 @@ public class UsuarioDAO {
                 Usuario usuario = new Usuario();
 
 
+                usuario.setCodigo(resultado.getInt(1));
                 usuario.setNome(resultado.getString(2));
-                usuario.setCpf(resultado.getString(3));
-                usuario.setTelefone(resultado.getString(4));
+                usuario.setCpf(resultado.getString(5));
 
                 /* Adiciona o cliente no array list */
                 listaUsuario.add(usuario);
