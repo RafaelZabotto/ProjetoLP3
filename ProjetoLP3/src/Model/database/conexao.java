@@ -8,8 +8,8 @@ import java.sql.Statement;
 public class conexao {
 
     private final String BD = "jdbc:mysql://localhost/instituicao";
-    private final String USER = "";
-    private final String PASSWORD = "";
+    private final String USER = "root";
+    private final String PASSWORD = "password";
 
 
 
@@ -102,10 +102,8 @@ public class conexao {
                 +"rua VARCHAR(100) NOT NULL,"
                 +"bairro VARCHAR(100) NOT NULL,"
                 +"cidade VARCHAR(100) NOT NULL,"
-                +"estado VARCHAR(2) NOT NULL,"
                 +"telefone_beneficiado VARCHAR(20),"
                 +"data_nasc DATE,"
-                +"possui_dependente INTEGER(1) NOT NULL DEFAULT 0,"
                 +"data_cadastro_beneficiado timestamp default current_timestamp(),"
                 +"profissao VARCHAR(100),"
                 +"beneficiado_excluido INTEGER DEFAULT 0 NOT NULL,"
@@ -140,15 +138,6 @@ public class conexao {
                   +"quantidade INTEGER NOT NULL,"
                   +"CONSTRAINT fk_cesta2 FOREIGN KEY (id_cesta) references cesta(id_cesta),"
                   +"CONSTRAINT fk_alimento2 FOREIGN KEY (id_alimento) references alimento(id_alimento));";
-
-            statement.executeUpdate(sql);
-
-            /* Tipo de alimento */
-
-            sql = "CREATE TABLE IF NOT EXISTS tipo("
-                 +"id_tipo INTEGER AUTO_INCREMENT NOT NULL,"
-                 +"nome_tipo VARCHAR(100) NOT NULL,"
-                 +"CONSTRAINT pk_tipo PRIMARY KEY (id_tipo));";
 
             statement.executeUpdate(sql);
 

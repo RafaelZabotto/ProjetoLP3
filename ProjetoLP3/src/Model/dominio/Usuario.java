@@ -9,6 +9,15 @@ public class Usuario {
     private String cpf;
     private String nome_login_usuario;
     private String senha_usuario;
+    private String pesquisa;
+
+    public String getPesquisa() {
+        return pesquisa;
+    }
+
+    public void setPesquisa(String pesquisa) {
+        this.pesquisa = pesquisa;
+    }
 
     public String getEndereco() {
         return endereco;

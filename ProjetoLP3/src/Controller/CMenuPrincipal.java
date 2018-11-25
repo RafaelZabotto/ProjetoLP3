@@ -55,7 +55,7 @@ public class CMenuPrincipal {
 
     @FXML
     public void novaFamilia() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrNovaFamilia.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrCadastroConsultaFamilia.fxml"));
         Pane root = loader.load();
         Controller.CCadastroFamilia controller = (Controller.CCadastroFamilia) loader.getController();
         // Fecha a tela
@@ -71,7 +71,7 @@ public class CMenuPrincipal {
     //Botão Cadastrar Usuario
     @FXML
     public void novoUsuario() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/teste.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrCadastraConsultaUsuario.fxml"));
         Pane root = loader.load();
         Controller.CCadastroUsuario controller = (Controller.CCadastroUsuario) loader.getController();
         // Fecha a tela
@@ -83,55 +83,6 @@ public class CMenuPrincipal {
         stage.setScene(scene);
         stage.show();
     }
-
-    //Botão Consulta Alimento
-    @FXML
-    public void consultaAlimento() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrConsultaAlimento.fxml"));
-        Pane root = loader.load();
-        Controller.CConsultaAlimento controller = (Controller.CConsultaAlimento) loader.getController();
-        // Fecha a tela
-        ((Stage) btnConsultaUsuario.getScene().getWindow()).hide();
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setResizable(false);      //Desabilita o redimensionamento
-        stage.setTitle("Consultar Alimentos");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    // Botão Consulta Familia
-    @FXML
-    public void consultaFamilia() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrConsultaFamilia.fxml"));
-        Pane root = loader.load();
-        Controller.CConsultaFamilia controller = (Controller.CConsultaFamilia) loader.getController();
-        // Fecha a tela
-        ((Stage) btnConsultaFamilia.getScene().getWindow()).hide();
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setResizable(false);      //Desabilita o redimensionamento
-        stage.setTitle("Consultar Familias");
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    @FXML
-    public void consultaUsuario() throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrConsultaUsuario.fxml"));
-        Pane root = loader.load();
-        Controller.CConsultaUsuario controller = (Controller.CConsultaUsuario) loader.getController();
-        // Fecha a tela
-        ((Stage) btnConsultaUsuario.getScene().getWindow()).hide();
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setResizable(false);      //Desabilita o redimensionamento
-        stage.setTitle("Consultar Usuário");
-        stage.setScene(scene);
-        stage.show();
-
-    }
-
 
     //Botão Sair
     @FXML
