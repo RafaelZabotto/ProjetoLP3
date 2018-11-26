@@ -21,22 +21,7 @@ public class CMenuPrincipal {
     private Button btnMenuFamilias;
 
     @FXML
-    private Button btnRelatorioValidade;
-
-    @FXML
-    private Button btnRelatorioEstoque;
-
-    @FXML
     private Button btnSair;
-
-    @FXML
-    private Button btnConsultaAlimento;
-
-    @FXML
-    private Button btnConsultaFamilia;
-
-    @FXML
-    private Button btnConsultaUsuario;
 
     @FXML
     public void novoAlimento() throws IOException {
