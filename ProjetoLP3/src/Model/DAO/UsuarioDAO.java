@@ -177,7 +177,7 @@ public class UsuarioDAO {
                 usuario.setTelefone(resultado.getString(4));
                 usuario.setCpf(resultado.getString(5));
                 usuario.setNome_login_usuario(resultado.getString(6));
-                usuario.setSenha_usuario(resultado.getString(6));
+                usuario.setSenha_usuario(resultado.getString(7));
 
 
                 listaUsuario.add(usuario);

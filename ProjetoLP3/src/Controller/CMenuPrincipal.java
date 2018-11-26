@@ -40,7 +40,7 @@ public class CMenuPrincipal {
 
     @FXML
     public void novoAlimento() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrNovoAlimento.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FmrCadastroConsultaAlimento.fxml"));
         Pane root = loader.load();
         Controller.CNovoAlimento controller = (Controller.CNovoAlimento) loader.getController();
         // Fecha a tela

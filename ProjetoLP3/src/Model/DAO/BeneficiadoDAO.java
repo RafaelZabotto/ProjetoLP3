@@ -11,7 +11,6 @@ import javax.swing.border.BevelBorder;
 import Model.database.conexao;
 import Model.dominio.Beneficiado;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.sql.Date;
 
 public class BeneficiadoDAO {
@@ -87,18 +86,16 @@ public class BeneficiadoDAO {
 
                Beneficiado beneficiado = new Beneficiado();
 
-                beneficiado.setCodigo(resultado.getInt(1));
+               // beneficiado.setCodigo(resultado.getInt(1));
                 beneficiado.setNome(resultado.getString(2));
-
-                Date dataNascimento = convertToDate(beneficiado.getData_nasc());
-
-                //beneficiado.setData_nasc(resultado.getDate(3));
-                beneficiado.setProfissao_beneficiado(resultado.getString(4));
-                beneficiado.setRua(resultado.getString(5));
-                beneficiado.setNumero(resultado.getString(6));
-                beneficiado.setCidade(resultado.getString(7));
-                beneficiado.setDescricao(resultado.getString(8));
-                beneficiado.setTelefone_beneficiado(resultado.getString(9));
+                beneficiado.setNumero(resultado.getString(3));
+                beneficiado.setRua(resultado.getString(4));
+                beneficiado.setBairro(resultado.getString(5));
+                beneficiado.setCidade(resultado.getString(6));
+                beneficiado.setTelefone_beneficiado(resultado.getString(7));
+                beneficiado.setProfissao_beneficiado(resultado.getString(8));
+                beneficiado.setDescricao(resultado.getString(9));
+                //beneficiado.setData_nasc(resultado.getDate(9).toLocalDate());
 
                 listaBeneficiado.add(beneficiado);
             }
@@ -113,8 +110,8 @@ public class BeneficiadoDAO {
     public boolean atualizar(Beneficiado beneficiado) {
 
 
-        String sql = "UPDATE beneficiado SET nome_beneficiado = ?, numero = ?, rua = ?, bairro = ?, cidade = ?, telefone_beneficiado = ?, data_nasc = ?," +
-                " profissao = ?, beneficiado_descricao = ? WHERE id_beneficiado = ?;";
+        String sql = "UPDATE beneficiado SET nome_beneficiado = ?, profissao_beneficiado = ?, telefone_beneficiado = ?, data_nasc = ?, rua = ?, numero = ?,bairro = ?, cidade = ?," +
+                " beneficiado_descricao = ? WHERE id_beneficiado = ?;";
 
         try {
 
@@ -122,18 +119,19 @@ public class BeneficiadoDAO {
 
 
             statement.setString(1, beneficiado.getNome());
-            statement.setString(2, beneficiado.getNumero());
-            statement.setString(3, beneficiado.getRua());
-            statement.setString(4, beneficiado.getBairro());
-            statement.setString(5, beneficiado.getCidade());
-            statement.setString(6, beneficiado.getTelefone_beneficiado());
+            statement.setString(2,beneficiado.getProfissao_beneficiado());
+            statement.setString(3, beneficiado.getTelefone_beneficiado());
 
             Date dataNascimento = convertToDate(beneficiado.getData_nasc());
 
-            statement.setDate(7,dataNascimento);
-            statement.setString(8,beneficiado.getProfissao_beneficiado());
-            statement.setString(9,beneficiado.getDescricao());
-            statement.setInt(10,beneficiado.getCodigo());
+
+            //statement.setDate(4,dataNascimento);
+            statement.setString(4, beneficiado.getRua());
+            statement.setString(5, beneficiado.getNumero());
+            statement.setString(6, beneficiado.getBairro());
+            statement.setString(7, beneficiado.getCidade());
+            statement.setString(8,beneficiado.getDescricao());
+            statement.setInt(9,beneficiado.getCodigo());
 
 
             statement.execute();
@@ -198,14 +196,13 @@ public class BeneficiadoDAO {
 
                 beneficiado.setCodigo(resultado.getInt(1));
                 beneficiado.setNome(resultado.getString(2));
-               // beneficiado.setData_nasc(resultado.getValue(3));
+                beneficiado.setData_nasc(resultado.getDate(3).toLocalDate());
                 beneficiado.setProfissao_beneficiado(resultado.getString(4));
                 beneficiado.setRua(resultado.getString(5));
                 beneficiado.setNumero(resultado.getString(6));
                 beneficiado.setCidade(resultado.getString(7));
-                beneficiado.setEstado(resultado.getString(8));
-                beneficiado.setDescricao(resultado.getString(9));
-                beneficiado.setTelefone_beneficiado(resultado.getString(10));
+                beneficiado.setDescricao(resultado.getString(8));
+                beneficiado.setTelefone_beneficiado(resultado.getString(9));
 
 
                 listaUsuario.add(beneficiado);

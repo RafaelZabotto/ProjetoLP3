@@ -8,8 +8,8 @@ import java.sql.Statement;
 public class conexao {
 
     private final String BD = "jdbc:mysql://localhost/instituicao";
-    private final String USER = "root";
-    private final String PASSWORD = "password";
+    private final String USER = "";
+    private final String PASSWORD = "";
 
 
 
@@ -104,10 +104,9 @@ public class conexao {
                 +"cidade VARCHAR(100) NOT NULL,"
                 +"telefone_beneficiado VARCHAR(20),"
                 +"data_nasc DATE,"
-                +"data_cadastro_beneficiado timestamp default current_timestamp(),"
                 +"profissao VARCHAR(100),"
-                +"beneficiado_excluido INTEGER DEFAULT 0 NOT NULL,"
                 +"beneficiado_descricao VARCHAR(255),"
+                    +"beneficiado_excluido INTEGER DEFAULT 0 NOT NULL,"
                 +"id_usuario INTEGER(5),"
                 +"CONSTRAINT pk_beneficiado PRIMARY KEY (id_beneficiado),"
                 +"CONSTRAINT fk_usuario2 FOREIGN KEY (id_usuario) references usuario(id_usuario));";

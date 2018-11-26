@@ -117,14 +117,15 @@ public class CCadastroFamilia {
             if(dao.inserir(b)) {
 
                 txtNomeBeneficiado.setText("");
-                txtEndereco.setText("");
-                txtTelefone.setText("");
                 txtProfissao.setText("");
-                //dataNasc.setValue(DateTime_SetFormat(DateTimePicker1.Handle, 'gg'););
+                txtTelefone.setText("");
+                dataNasc.getEditor().clear();
+                txtEndereco.setText("");
                 txtNumero.setText("");
                 txtBairro.setText("");
                 txtCidade.setText("");
                 txtDescricao.setText("");
+
                 Alerta.infoAlert("Beneficiado cadastrado", "Beneficiado cadastrado com sucesso.");
                 atualizaLista();
             }
@@ -134,10 +135,10 @@ public class CCadastroFamilia {
 
 
                 txtNomeBeneficiado.setText("");
-                txtEndereco.setText("");
-                txtTelefone.setText("");
                 txtProfissao.setText("");
-                //dataNasc.setValue("");
+                txtTelefone.setText("");
+                dataNasc.getEditor().clear();
+                txtEndereco.setText("");
                 txtNumero.setText("");
                 txtBairro.setText("");
                 txtCidade.setText("");
@@ -166,7 +167,7 @@ public class CCadastroFamilia {
                 txtNomeBeneficiado.setText(beneficiadoSelecionado.getNome());
                 txtProfissao.setText(beneficiadoSelecionado.getProfissao_beneficiado());
                 txtTelefone.setText(beneficiadoSelecionado.getTelefone_beneficiado());
-                dataNasc.setValue(beneficiadoSelecionado.getData_nasc());
+                //dataNasc.setValue(beneficiadoSelecionado.getData_nasc());
                 txtEndereco.setText(beneficiadoSelecionado.getRua());
                 txtNumero.setText(beneficiadoSelecionado.getNumero());
                 txtBairro.setText(beneficiadoSelecionado.getBairro());
