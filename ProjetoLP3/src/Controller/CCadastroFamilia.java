@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javafx.scene.control.Alert;
 import java.util.Optional;
@@ -30,7 +31,7 @@ import java.util.Date;
 
 public class CCadastroFamilia {
 
-    ObservableList<Beneficiado> beneficiado = FXCollections.observableArrayList();
+    ObservableList<Beneficiado> beneficiados = FXCollections.observableArrayList();
     Beneficiado beneficiadoSelecionado = null;
 
     @FXML
@@ -75,6 +76,9 @@ public class CCadastroFamilia {
     @FXML
     private TableView<Beneficiado> tableListaBeneficiado;
 
+    @FXML
+    private TextField txtPesquisaBeneficiado;
+
 
     @FXML
     public void voltaMenu() throws IOException {
@@ -98,10 +102,10 @@ public class CCadastroFamilia {
 
         b.setNome(txtNomeBeneficiado.getText());
         b.setProfissao_beneficiado(txtProfissao.getText());
+        b.setTelefone_beneficiado(txtTelefone.getText());
         b.setData_nasc(dataNasc.getValue());
         b.setRua(txtEndereco.getText());
-        b.setTelefone_beneficiado(txtTelefone.getText());
-        b.setNumero(Integer.parseInt(txtNumero.getText()));
+        b.setNumero(txtNumero.getText());
         b.setBairro(txtBairro.getText());
         b.setCidade(txtCidade.getText());
         b.setDescricao(txtDescricao.getText());
@@ -116,7 +120,7 @@ public class CCadastroFamilia {
                 txtEndereco.setText("");
                 txtTelefone.setText("");
                 txtProfissao.setText("");
-                //dataNasc.setValue("");
+                //dataNasc.setValue(DateTime_SetFormat(DateTimePicker1.Handle, 'gg'););
                 txtNumero.setText("");
                 txtBairro.setText("");
                 txtCidade.setText("");
@@ -160,11 +164,14 @@ public class CCadastroFamilia {
                 paneBeneficiado.getSelectionModel().select(tabCadastraBeneficiado);
 
                 txtNomeBeneficiado.setText(beneficiadoSelecionado.getNome());
+                txtProfissao.setText(beneficiadoSelecionado.getProfissao_beneficiado());
+                txtTelefone.setText(beneficiadoSelecionado.getTelefone_beneficiado());
+                dataNasc.setValue(beneficiadoSelecionado.getData_nasc());
                 txtEndereco.setText(beneficiadoSelecionado.getRua());
-                txtNumero.setText(Integer.parseInt(beneficiadoSelecionado.getText()));
-                txtTelefone.setText(beneficiadoSelecionado.getTelefone());
-                txtNomebeneficiadoLogin.setText(beneficiadoSelecionado.getNome_login_beneficiado());
-                txtSenha.setText(beneficiadoSelecionado.getSenha_beneficiado());
+                txtNumero.setText(beneficiadoSelecionado.getNumero());
+                txtBairro.setText(beneficiadoSelecionado.getBairro());
+                txtCidade.setText(beneficiadoSelecionado.getCidade());
+                txtDescricao.setText(beneficiadoSelecionado.getDescricao());
 
 
             }
@@ -172,9 +179,43 @@ public class CCadastroFamilia {
         atualizaLista();
     }
 
-    public void excluiBeneficiado(){}
+    public void excluiBeneficiado(){
 
-    public void pesquisaBeneficiado(){}
+
+        BeneficiadoDAO beneficiadoRemovido = new BeneficiadoDAO();
+        beneficiadoSelecionado = tableListaBeneficiado.getSelectionModel().getSelectedItem();
+
+        if(beneficiadoSelecionado ==  null) {
+            Alerta.errorAlert("Erro", "Selecione um beneficiado para excluir.");
+        } else {
+            Alert alert = Alerta.confirmationAlert("Deseja excluir o beneficiado?", "Você tem certeza que deseja excluir este beneficiado?");
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if (result.get() == ButtonType.OK) {
+                if(beneficiadoRemovido.remover(beneficiadoSelecionado)) {
+
+                    Alerta.infoAlert("beneficiado excluído", "beneficiado excluído com sucesso.");
+                }
+            }
+        }
+        atualizaLista();
+        beneficiadoSelecionado = null;
+
+    }
+
+    public void pesquisaBeneficiado(){
+
+        BeneficiadoDAO uDAO = new BeneficiadoDAO();
+        ArrayList<Beneficiado>listaBeneficiado = uDAO.pesquisarBeneficiado(txtPesquisaBeneficiado.getText());
+
+
+        beneficiados.clear();
+        for(int i=0; i<listaBeneficiado.size(); i++){
+
+            beneficiados.add(listaBeneficiado.get(i));
+        }
+
+    }
 
     public void historicoBeneficiado(){}
 
@@ -183,10 +224,10 @@ public class CCadastroFamilia {
         BeneficiadoDAO uDAO = new BeneficiadoDAO();
         ArrayList<Beneficiado>listaBeneficiado = uDAO.listarTodos();
 
-        beneficiado.clear();
+        beneficiados.clear();
         for(int i=0; i<listaBeneficiado.size(); i++){
 
-            beneficiado.add(listaBeneficiado.get(i));
+            beneficiados.add(listaBeneficiado.get(i));
         }
 
     }
@@ -207,7 +248,7 @@ public class CCadastroFamilia {
         nome.setCellValueFactory( new PropertyValueFactory<>("nome"));
 
 
-        tableListaBeneficiado.setItems(beneficiado);
+        tableListaBeneficiado.setItems(beneficiados);
 
         atualizaLista();
 

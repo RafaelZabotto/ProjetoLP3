@@ -9,7 +9,7 @@ public class Beneficiado {
     private LocalDate data_nasc;
     private String profissao_beneficiado;
     private String telefone_beneficiado;
-    private int numero;
+    private String numero;
     private String rua;
     private String bairro;
     private String cidade;
@@ -64,11 +64,11 @@ public class Beneficiado {
         this.telefone_beneficiado = telefone_beneficiado;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 

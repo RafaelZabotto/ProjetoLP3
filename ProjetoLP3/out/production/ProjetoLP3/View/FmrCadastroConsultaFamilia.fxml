@@ -15,7 +15,7 @@
    <children>
       <TabPane fx:id="paneBeneficiado" layoutY="-2.0" prefHeight="394.0" prefWidth="528.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Cadastrar Beneficiado">
+          <Tab fx:id="tabCadastraBeneficiado" text="Cadastrar Beneficiado">
                <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="249.0" prefWidth="381.0">
                      <children>

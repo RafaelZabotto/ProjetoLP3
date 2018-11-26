@@ -98,7 +98,7 @@ public class conexao {
             sql = "CREATE TABLE IF NOT EXISTS beneficiado("
                 +"id_beneficiado INTEGER AUTO_INCREMENT NOT NULL,"
                 +"nome_beneficiado VARCHAR(100) NOT NULL,"
-                +"numero INTEGER NOT NULL,"
+                +"numero VARCHAR(100) NOT NULL,"
                 +"rua VARCHAR(100) NOT NULL,"
                 +"bairro VARCHAR(100) NOT NULL,"
                 +"cidade VARCHAR(100) NOT NULL,"

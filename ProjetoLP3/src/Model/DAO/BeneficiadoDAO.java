@@ -40,7 +40,7 @@ public class BeneficiadoDAO {
 
             PreparedStatement statement = connect.prepareStatement(sql);
             statement.setString(1, beneficiado.getNome());
-            statement.setInt(2, beneficiado.getNumero());
+            statement.setString(2, beneficiado.getNumero());
             statement.setString(3, beneficiado.getRua());
             statement.setString(4, beneficiado.getBairro());
             statement.setString(5, beneficiado.getCidade());
@@ -90,15 +90,15 @@ public class BeneficiadoDAO {
                 beneficiado.setCodigo(resultado.getInt(1));
                 beneficiado.setNome(resultado.getString(2));
 
-//                Date dataNascimento = convertToDate(beneficiado.getData_nasc());
-//
-//                //beneficiado.setData_nasc(resultado.getDate(3,dataNascimento));
-//                beneficiado.setProfissao_beneficiado(resultado.getString(4));
-//                beneficiado.setRua(resultado.getString(5));
-//                beneficiado.setNumero(resultado.getInt(6));
-//                beneficiado.setCidade(resultado.getString(7));
-//                beneficiado.setDescricao(resultado.getString(8));
-//                beneficiado.setTelefone_beneficiado(resultado.getString(9));
+                Date dataNascimento = convertToDate(beneficiado.getData_nasc());
+
+                //beneficiado.setData_nasc(resultado.getDate(3));
+                beneficiado.setProfissao_beneficiado(resultado.getString(4));
+                beneficiado.setRua(resultado.getString(5));
+                beneficiado.setNumero(resultado.getString(6));
+                beneficiado.setCidade(resultado.getString(7));
+                beneficiado.setDescricao(resultado.getString(8));
+                beneficiado.setTelefone_beneficiado(resultado.getString(9));
 
                 listaBeneficiado.add(beneficiado);
             }
@@ -122,7 +122,7 @@ public class BeneficiadoDAO {
 
 
             statement.setString(1, beneficiado.getNome());
-            statement.setInt(2, beneficiado.getNumero());
+            statement.setString(2, beneficiado.getNumero());
             statement.setString(3, beneficiado.getRua());
             statement.setString(4, beneficiado.getBairro());
             statement.setString(5, beneficiado.getCidade());
@@ -133,7 +133,7 @@ public class BeneficiadoDAO {
             statement.setDate(7,dataNascimento);
             statement.setString(8,beneficiado.getProfissao_beneficiado());
             statement.setString(9,beneficiado.getDescricao());
-            statement.setInt(9,beneficiado.getCodigo());
+            statement.setInt(10,beneficiado.getCodigo());
 
 
             statement.execute();
@@ -172,7 +172,7 @@ public class BeneficiadoDAO {
         return executou;
     }
 
-    public ArrayList<Beneficiado> pesquisarUsuario(String nome) {
+    public ArrayList<Beneficiado> pesquisarBeneficiado(String nome) {
 
         PreparedStatement stmt = null;
         ResultSet resultado = null;
@@ -201,7 +201,7 @@ public class BeneficiadoDAO {
                // beneficiado.setData_nasc(resultado.getValue(3));
                 beneficiado.setProfissao_beneficiado(resultado.getString(4));
                 beneficiado.setRua(resultado.getString(5));
-                beneficiado.setNumero(resultado.getInt(6));
+                beneficiado.setNumero(resultado.getString(6));
                 beneficiado.setCidade(resultado.getString(7));
                 beneficiado.setEstado(resultado.getString(8));
                 beneficiado.setDescricao(resultado.getString(9));
