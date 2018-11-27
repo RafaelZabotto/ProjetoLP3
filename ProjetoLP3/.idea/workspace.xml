@@ -2,26 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Arquivos FXML/Telas Novas/FmrCadastroConsultaAlimento.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../Arquivos FXML/Telas Novas/FmrCadastroConsultaAlimento.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Controller/CCadastroFamilia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Controller/CCadastroFamilia.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Controller/CMenuPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Controller/CMenuPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Controller/CLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Controller/CLogin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Controller/CNovoAlimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Controller/CNovoAlimento.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/DAO/AlimentoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/DAO/AlimentoDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/DAO/BeneficiadoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/DAO/BeneficiadoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/DAO/UsuarioDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/DAO/UsuarioDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/database/conexao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/database/conexao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/dominio/Alimento.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/dominio/Alimento.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/dominio/Beneficiado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/Model/dominio/Beneficiado.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetoLP3/View/FmrCadastroConsultaAlimento.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetoLP3/View/FmrCadastroConsultaAlimento.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CCadastroFamilia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CCadastroFamilia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CMenuPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CMenuPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CNovoAlimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CNovoAlimento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/DAO/AlimentoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DAO/AlimentoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/DAO/BeneficiadoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DAO/BeneficiadoDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/DAO/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/DAO/UsuarioDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/database/conexao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/database/conexao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/dominio/Alimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/dominio/Alimento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/dominio/Beneficiado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/dominio/Beneficiado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/FmrCadastroConsultaAlimento.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/FmrCadastroConsultaAlimento.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/FmrLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/FmrLogin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/FmrMenuPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/FmrMenuPrincipal.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -183,8 +186,9 @@
     <session id="4304727">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="32" />
+          <entry key="project.closed" value="34" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="4" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.18" value="1" />
@@ -197,7 +201,7 @@
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.38" value="3" />
           <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.43" value="2" />
+          <entry key="project.open.time.43" value="3" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.47" value="2" />
           <entry key="project.open.time.52" value="1" />
@@ -206,36 +210,36 @@
           <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.64" value="1" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="aux" value="1" />
           <entry key="class" value="1" />
-          <entry key="fxml" value="41" />
-          <entry key="java" value="95" />
+          <entry key="fxml" value="45" />
+          <entry key="java" value="111" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="95" />
+          <entry key="JAVA" value="111" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="42" />
+          <entry key="XML" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
           <entry key="fxml" value="84" />
-          <entry key="java" value="16117" />
+          <entry key="java" value="18254" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="16117" />
+          <entry key="JAVA" value="18254" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="84" />
         </counts>
@@ -248,34 +252,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CCadastroUsuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3225">
-              <caret line="232" column="5" selection-start-line="208" selection-start-column="4" selection-end-line="232" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CCadastroFamilia.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3120">
-              <caret line="232" selection-start-line="232" selection-end-line="232" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/DAO/AlimentoDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="64" column="97" selection-start-line="64" selection-start-column="97" selection-end-line="64" selection-end-column="97" />
+            <state relative-caret-position="300">
+              <caret line="77" column="14" lean-forward="true" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -284,53 +264,88 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CNovoAlimento.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/DAO/LoginDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="127" selection-start-line="127" selection-end-line="127" />
+            <state relative-caret-position="255">
+              <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/database/conexao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/CLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/FmrLogin.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/database/conexao.java">
+        <entry file="file://$PROJECT_DIR$/src/Model/dominio/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+            <state>
+              <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+              <folding>
+                <element signature="e#152#153#0" expanded="true" />
+                <element signature="e#177#178#0" expanded="true" />
+                <element signature="e#213#214#0" expanded="true" />
+                <element signature="e#241#242#0" expanded="true" />
+                <element signature="e#274#275#0" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CMenuPrincipal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="42" column="100" selection-start-line="42" selection-start-column="100" selection-end-line="42" selection-end-column="100" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/FmrCadastroConsultaAlimento.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="85" selection-start-line="28" selection-start-column="85" selection-end-line="28" selection-end-column="85" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/View/FmrMenuPrincipal.fxml">
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/FmrCadastroConsultaFamilia.fxml">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+            <state relative-caret-position="150">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -367,11 +382,9 @@
         <option value="$PROJECT_DIR$/src/View/FmrConsultaFamilia.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/CConsultaFamilia.java" />
         <option value="$PROJECT_DIR$/src/Controller/CConsultaAlimento.java" />
-        <option value="$PROJECT_DIR$/src/View/FmrLogin.fxml" />
         <option value="$PROJECT_DIR$/src/View/FmrNovaFamilia.fxml" />
         <option value="$PROJECT_DIR$/src/View/FmrNovoAlimento.fxml" />
         <option value="$PROJECT_DIR$/src/Model/dominio/alimento.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Model/DAO/usuarioDAO.java" />
         <option value="$PROJECT_DIR$/src/Model/dominio/beneficiado.java" />
         <option value="$PROJECT_DIR$/src/Model/dominio/cesta.java" />
@@ -381,7 +394,6 @@
         <option value="$PROJECT_DIR$/src/Model/dominio/tipo.java" />
         <option value="$PROJECT_DIR$/src/Model/dominio/Tipo.java" />
         <option value="$PROJECT_DIR$/src/Model/dominio/usuario.java" />
-        <option value="$PROJECT_DIR$/src/Controller/CLogin.java" />
         <option value="$PROJECT_DIR$/src/View/FmrConsultaUsuario.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/CConsultaUsuario.java" />
         <option value="$PROJECT_DIR$/src/View/FrmNovoUsuario.fxml" />
@@ -391,18 +403,24 @@
         <option value="$PROJECT_DIR$/src/Model/dominio/Usuario.java" />
         <option value="$PROJECT_DIR$/src/View/FmrCadastraConsultaUsuario.fxml" />
         <option value="$PROJECT_DIR$/src/Controller/CCadastroUsuario.java" />
-        <option value="$PROJECT_DIR$/src/View/FmrMenuPrincipal.fxml" />
         <option value="$PROJECT_DIR$/src/View/FmrCadastroConsultaFamilia.fxml" />
-        <option value="$PROJECT_DIR$/src/Model/dominio/Beneficiado.java" />
-        <option value="$PROJECT_DIR$/src/Controller/CCadastroFamilia.java" />
-        <option value="$PROJECT_DIR$/src/Model/DAO/UsuarioDAO.java" />
-        <option value="$PROJECT_DIR$/src/Model/DAO/BeneficiadoDAO.java" />
-        <option value="$PROJECT_DIR$/src/Model/dominio/Alimento.java" />
-        <option value="$PROJECT_DIR$/src/Controller/CMenuPrincipal.java" />
-        <option value="$PROJECT_DIR$/src/View/FmrCadastroConsultaAlimento.fxml" />
-        <option value="$PROJECT_DIR$/src/Controller/CNovoAlimento.java" />
-        <option value="$PROJECT_DIR$/src/Model/DAO/AlimentoDAO.java" />
         <option value="$PROJECT_DIR$/src/Model/database/conexao.java" />
+        <option value="$PROJECT_DIR$/src/Model/dominio/Beneficiado.java" />
+        <option value="$PROJECT_DIR$/src/Model/DAO/BeneficiadoDAO.java" />
+        <option value="$PROJECT_DIR$/src/Controller/CCadastroFamilia.java" />
+        <option value="$PROJECT_DIR$/src/Model/dominio/Alimento.java" />
+        <option value="$PROJECT_DIR$/src/Model/DAO/AlimentoDAO.java" />
+        <option value="$PROJECT_DIR$/src/Model/dominio/Estoque.java" />
+        <option value="$PROJECT_DIR$/src/Controller/CNovoAlimento.java" />
+        <option value="$PROJECT_DIR$/src/View/FmrCadastroConsultaAlimento.fxml" />
+        <option value="$PROJECT_DIR$/src/Controller/CMenuPrincipal.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/View/FmrMenuPrincipal.fxml" />
+        <option value="$PROJECT_DIR$/src/Model/dominio/Login.java" />
+        <option value="$PROJECT_DIR$/src/View/FmrLogin.fxml" />
+        <option value="$PROJECT_DIR$/src/Model/DAO/UsuarioDAO.java" />
+        <option value="$PROJECT_DIR$/src/Controller/CLogin.java" />
+        <option value="$PROJECT_DIR$/src/Model/DAO/LoginDAO.java" />
       </list>
     </option>
   </component>
@@ -521,7 +539,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543262586686" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543277464670" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Arquivos FXML/FmrMenuPrincipal.fxml" />
@@ -655,7 +673,7 @@
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.2590909" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.6703755" visible="true" weight="0.19393939" />
       <window_info id="Structure" order="5" weight="0.24962178" />
       <window_info id="Favorites" order="6" />
       <window_info anchor="bottom" id="Terminal" order="0" />
@@ -800,59 +818,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/FmrLogin.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Arquivos FXML/FmrMenuPrincipal.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/FmrConsultaUsuario.fxml" />
     <entry file="file://$PROJECT_DIR$/src/Controller/CConsultaUsuario.java" />
     <entry file="file://$PROJECT_DIR$/src/View/FrmNovoUsuario.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/FmrConsultaFamilia.fxml" />
     <entry file="file://$PROJECT_DIR$/src/View/FmrNovaFamilia.fxml" />
     <entry file="file://$PROJECT_DIR$/src/View/FmrConsultaAlimento.fxml" />
     <entry file="file://$PROJECT_DIR$/src/View/FmrNovoAlimento.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/Controller/CLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CConsultaAlimento.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/dominio/Alerta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/FmrMenuPrincipal.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/dominio/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -861,60 +842,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/FmrCadastraConsultaUsuario.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="66" column="137" selection-start-line="66" selection-start-column="137" selection-end-line="66" selection-end-column="137" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/DAO/UsuarioDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="90" column="5" lean-forward="true" selection-start-line="56" selection-start-column="4" selection-end-line="90" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/DAO/BeneficiadoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="97" column="79" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/dominio/Alimento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/dominio/Beneficiado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#1489#1490#0" expanded="true" />
-            <element signature="e#1518#1519#0" expanded="true" />
-            <element signature="e#1562#1563#0" expanded="true" />
-            <element signature="e#1598#1599#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -928,10 +859,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/FmrCadastroConsultaFamilia.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/dominio/Beneficiado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding>
+            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1598#1599#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/DAO/BeneficiadoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="49" column="88" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CCadastroFamilia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3120">
-          <caret line="232" selection-start-line="232" selection-end-line="232" />
+        <state relative-caret-position="167">
+          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="111" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/FmrCadastroConsultaAlimento.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="85" selection-start-line="28" selection-start-column="85" selection-end-line="28" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/dominio/Estoque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#554#555#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CMenuPrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/FmrMenuPrincipal.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/dominio/Alerta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/FmrLogin.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/dominio/Alimento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CNovoAlimento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-775">
+          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/DAO/UsuarioDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="192" column="4" selection-start-line="192" selection-start-column="4" selection-end-line="192" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -940,41 +1008,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/DAO/AlimentoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="64" column="97" selection-start-line="64" selection-start-column="97" selection-end-line="64" selection-end-column="97" />
+        <state relative-caret-position="300">
+          <caret line="77" column="14" lean-forward="true" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CMenuPrincipal.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/DAO/LoginDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="42" column="100" selection-start-line="42" selection-start-column="100" selection-end-line="42" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/FmrCadastroConsultaAlimento.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="85" selection-start-line="28" selection-start-column="85" selection-end-line="28" selection-end-column="85" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/FmrCadastroConsultaFamilia.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CNovoAlimento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        <state relative-caret-position="255">
+          <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -984,7 +1029,28 @@
     <entry file="file://$PROJECT_DIR$/src/Model/database/conexao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/dominio/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+          <folding>
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

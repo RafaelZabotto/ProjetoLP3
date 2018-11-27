@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
         Parent root = FXMLLoader.load(getClass().getResource("View/FmrLogin.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Tela de Login");
         primaryStage.setScene(new Scene(root, 235, 461));
         primaryStage.show();
     }

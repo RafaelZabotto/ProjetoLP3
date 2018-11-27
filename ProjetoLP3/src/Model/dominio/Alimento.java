@@ -7,7 +7,7 @@ public class Alimento {
 
     private int codigo;
     private String nome;
-    private LocalDate data_validade;
+    private Date data_validade;
     private String tipo;
 
     public int getCodigo() {
@@ -26,11 +26,11 @@ public class Alimento {
         this.nome = nome;
     }
 
-    public LocalDate getData_validade() {
+    public Date getData_validade() {
         return data_validade;
     }
 
-    public void setData_validade(LocalDate data_validade) {
+    public void setData_validade(Date data_validade) {
         this.data_validade = data_validade;
     }
 

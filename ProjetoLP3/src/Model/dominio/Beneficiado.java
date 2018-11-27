@@ -1,12 +1,12 @@
 package Model.dominio;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Beneficiado {
 
     private int codigo;
     private String nome;
-    private LocalDate data_nasc;
+    private Date data_nasc;
     private String profissao_beneficiado;
     private String telefone_beneficiado;
     private String numero;
@@ -40,11 +40,11 @@ public class Beneficiado {
         this.nome = nome;
     }
 
-    public LocalDate getData_nasc() {
+    public Date getData_nasc() {
         return data_nasc;
     }
 
-    public void setData_nasc(LocalDate data_nasc) {
+    public void setData_nasc(Date data_nasc) {
         this.data_nasc = data_nasc;
     }
 

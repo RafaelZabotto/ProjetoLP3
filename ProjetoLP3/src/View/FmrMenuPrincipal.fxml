@@ -7,27 +7,29 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="253.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CMenuPrincipal">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="332.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CMenuPrincipal">
    <children>
-      <Pane layoutX="-12.0" layoutY="-7.0" prefHeight="95.0" prefWidth="283.0" style="-fx-background-color: #00A2E8;" />
-      <Text layoutX="10.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
-         <font>
-            <Font name="Tahoma Bold" size="32.0" />
-         </font>
-      </Text>
-      <Button fx:id="btnMenuAlimento" layoutX="31.0" layoutY="117.0" mnemonicParsing="false" onAction="#novoAlimento" prefHeight="79.0" prefWidth="192.0" text="Cadastrar Alimento">
-         <font>
-            <Font name="Tahoma" size="18.0" />
-         </font></Button>
-      <Button fx:id="btnMenuUsuarios" layoutX="31.0" layoutY="314.0" mnemonicParsing="false" onAction="#novoUsuario" prefHeight="79.0" prefWidth="192.0" text="Cadastrar Usuário">
+      <Pane layoutX="-12.0" layoutY="-7.0" prefHeight="95.0" prefWidth="345.0" style="-fx-background-color: #00A2E8;">
+         <children>
+            <Text layoutX="65.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
+               <font>
+                  <Font name="Tahoma Bold" size="32.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Button fx:id="btnMenuAlimento" layoutX="31.0" layoutY="117.0" mnemonicParsing="false" onAction="#novoAlimento" prefHeight="79.0" prefWidth="276.0" text="Cadastrar e Consultar Alimento" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Tahoma" size="18.0" />
          </font></Button>
-      <Button fx:id="btnMenuFamilias" layoutX="31.0" layoutY="218.0" mnemonicParsing="false" onAction="#novaFamilia" prefHeight="79.0" prefWidth="192.0" text="Cadastrar Família">
+      <Button fx:id="btnMenuUsuarios" layoutX="31.0" layoutY="314.0" mnemonicParsing="false" onAction="#novoUsuario" prefHeight="95.0" prefWidth="276.0" text="Cadastrar  e Consultar Usuário" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Tahoma" size="18.0" />
          </font></Button>
-      <Button fx:id="btnSair" layoutX="95.0" layoutY="440.0" mnemonicParsing="false" onAction="#sair" prefHeight="28.0" prefWidth="66.0" text="Sair" textAlignment="CENTER">
+      <Button fx:id="btnMenuFamilias" layoutX="31.0" layoutY="218.0" mnemonicParsing="false" onAction="#novaFamilia" prefHeight="79.0" prefWidth="276.0" text="Cadastrar e Consultar Família" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Tahoma" size="18.0" />
+         </font></Button>
+      <Button fx:id="btnSair" layoutX="133.0" layoutY="441.0" mnemonicParsing="false" onAction="#sair" prefHeight="28.0" prefWidth="66.0" text="Sair" textAlignment="CENTER">
          <font>
             <Font size="16.0" />
          </font></Button>

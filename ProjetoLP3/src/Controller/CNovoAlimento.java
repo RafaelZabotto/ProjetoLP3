@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.dominio.Estoque;
 import Model.dominio.Alerta;
 import Model.dominio.Alimento;
 import Model.DAO.AlimentoDAO;
@@ -14,12 +15,15 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class CNovoAlimento {
 
     ObservableList<Alimento> alimentos = FXCollections.observableArrayList();
+    ObservableList<Alimento> alimentosValidade = FXCollections.observableArrayList();
+    ObservableList<Estoque> estoque = FXCollections.observableArrayList();
 
 
     @FXML
@@ -48,6 +52,12 @@ public class CNovoAlimento {
 
     @FXML
     private TableView<Alimento> tableAlimento;
+
+    @FXML
+    private TableView<Alimento> tableValidade;
+
+    @FXML
+    private TableView<Estoque> tableEstoqueAlimentos;
 
 
 
@@ -81,7 +91,7 @@ public class CNovoAlimento {
 
         a.setNome(txtNomeAlimento.getText());
         a.setTipo(txtTipo.getText());
-        a.setData_validade(dataValidade.getValue());
+        a.setData_validade(Date.from(dataValidade.getValue().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()));
 
         dao.inserir(a);
 
@@ -105,11 +115,25 @@ public class CNovoAlimento {
             alimentos.add(listaAlimento.get(i));
         }
 
+        ArrayList<Alimento> listaAlimentoValidade = uDAO.listarValidadeTodos();
+
+        alimentosValidade.clear();
+        for(int i=0; i<listaAlimentoValidade.size(); i++){
+
+            alimentosValidade.add(listaAlimentoValidade.get(i));
+        }
+
+        ArrayList<Estoque> listaEstoque = uDAO.listarEstoqueTodos();
+
+        estoque.clear();
+        for(int i=0; i<listaEstoque.size(); i++){
+
+            estoque.add(listaEstoque.get(i));
+        }
+
     }
 
     public void initialize(){
-
-
 
         TableColumn<Alimento , Integer> codigo  = new TableColumn<>("Código");
         codigo.setMinWidth(50);
@@ -117,20 +141,39 @@ public class CNovoAlimento {
         TableColumn<Alimento , String> nome  = new TableColumn<>("Nome");
         nome.setMinWidth(300);
 
-        TableColumn<Alimento , Date> validade  = new TableColumn<>("Validade");
-        validade.setMinWidth(122);
+        TableColumn<Alimento , Date> data_validade  = new TableColumn<>("Validade");
+        data_validade.setMinWidth(122);
 
-        tableAlimento.getColumns().addAll(codigo, nome, validade);
+        tableAlimento.getColumns().addAll(codigo, nome, data_validade);
+        tableValidade.getColumns().addAll(codigo, nome, data_validade);
+
 
         codigo.setCellValueFactory( new PropertyValueFactory<>("codigo"));
         nome.setCellValueFactory( new PropertyValueFactory<>("nome"));
-        validade.setCellValueFactory( new PropertyValueFactory<>("validade"));
+        data_validade.setCellValueFactory( new PropertyValueFactory<>("data_validade"));
+
+
+        TableColumn<Estoque , String> tipo  = new TableColumn<>("Tipo");
+        tipo.setMinWidth(50);
+
+        TableColumn<Estoque , Integer> quantidade  = new TableColumn<>("Quantidade");
+        quantidade.setMinWidth(300);
+
+
+
+        tableEstoqueAlimentos.getColumns().addAll(tipo,quantidade);
+
+        tipo.setCellValueFactory( new PropertyValueFactory<>("tipo"));
+        quantidade.setCellValueFactory( new PropertyValueFactory<>("quantidade"));
 
         tableAlimento.setItems(alimentos);
+        tableValidade.setItems(alimentosValidade);
+        tableEstoqueAlimentos.setItems(estoque);
 
         atualizaLista();
 
 
     }
+
 
 }

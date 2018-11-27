@@ -1,5 +1,8 @@
 package Controller;
 
+import java.time.Instant;
+
+import java.time.ZoneId;
 import Model.dominio.Beneficiado;
 import Model.DAO.BeneficiadoDAO;
 import javafx.fxml.FXML;
@@ -103,7 +106,7 @@ public class CCadastroFamilia {
         b.setNome(txtNomeBeneficiado.getText());
         b.setProfissao_beneficiado(txtProfissao.getText());
         b.setTelefone_beneficiado(txtTelefone.getText());
-        b.setData_nasc(dataNasc.getValue());
+        b.setData_nasc(Date.from(dataNasc.getValue().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()));
         b.setRua(txtEndereco.getText());
         b.setNumero(txtNumero.getText());
         b.setBairro(txtBairro.getText());
@@ -167,7 +170,7 @@ public class CCadastroFamilia {
                 txtNomeBeneficiado.setText(beneficiadoSelecionado.getNome());
                 txtProfissao.setText(beneficiadoSelecionado.getProfissao_beneficiado());
                 txtTelefone.setText(beneficiadoSelecionado.getTelefone_beneficiado());
-                //dataNasc.setValue(beneficiadoSelecionado.getData_nasc());
+                dataNasc.setValue(Instant.ofEpochMilli(beneficiadoSelecionado.getData_nasc().getTime()).atZone(ZoneId.systemDefault()).toLocalDate());
                 txtEndereco.setText(beneficiadoSelecionado.getRua());
                 txtNumero.setText(beneficiadoSelecionado.getNumero());
                 txtBairro.setText(beneficiadoSelecionado.getBairro());

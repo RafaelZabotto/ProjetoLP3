@@ -8,8 +8,8 @@ import java.sql.Statement;
 public class conexao {
 
     private final String BD = "jdbc:mysql://localhost/instituicao";
-    private final String USER = "";
-    private final String PASSWORD = "";
+    private final String USER = "root";
+    private final String PASSWORD = "password";
 
 
 
